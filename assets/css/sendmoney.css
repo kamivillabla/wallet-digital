@@ -1,0 +1,210 @@
+.main--margin-top {
+  margin-top: 40px;
+}
+.container-sendmoney {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sendmoney,
+.container-contact {
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 35px;
+  box-shadow: var(--box-shadow-primary);
+  justify-content: center;
+  height: 600px;
+}
+.contact__list-group {
+  overflow-y: auto;
+  max-height: 430px;
+}
+.contact__list-group ul {
+  padding-left: 0;
+}
+
+.sendmoney .row {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  width: 100%;
+}
+.container-contact input,
+.sendmoney input,
+.sendmoney textarea {
+  width: 100%;
+  border: none;
+  padding: 12px 10px 12px 20px;
+  border: 1px solid var(--color-primary);
+  box-sizing: border-box;
+}
+
+.container-contact input:placeholder,
+.sendmoney input::placeholder {
+  color: grey;
+}
+
+.container-contact input:focus,
+.sendmoney input:focus {
+  box-shadow: 0 0 0 0.2rem #6a5f9994;
+  color: rgb(44, 44, 44);
+}
+.sendmoney textarea:focus {
+  box-shadow: 0 0 0 0.2rem #6a5f9994;
+  color: rgb(44, 44, 44);
+}
+
+.sendmoney .row {
+  text-align: left;
+}
+
+.sendmoney__money {
+  position: relative;
+}
+.sendmoney__money i {
+  position: absolute;
+  bottom: 10.5px;
+  left: 16px;
+  font-size: 18px;
+}
+.sendmoney__credit-card {
+  width: 350px;
+  height: 200px;
+  background-image: linear-gradient(145deg, #826ab4, #a58dd8);
+  border-radius: 20px;
+  color: white;
+  padding: 20px 30px;
+  box-shadow: var(--box-shadow-primary);
+  font-family: 'Arial', sans-serif;
+  position: absolute;
+  top: -133px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.credit-card__logo {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.credit-card__balance {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.credit-card__balance span {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.credit-card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 16px;
+}
+
+.credit-card__holder {
+  margin-top: 26px;
+}
+
+.credit-card__holder span,
+.credit-card__expires span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.container-sendmoney button,
+.contact__form-contact button {
+  width: 72%;
+  background: var(--color-primary);
+  padding: 10px;
+  color: white;
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+.container-sendmoney button:hover,
+.contact__form-contact button:hover {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.contact__btn span {
+  background: var(--color-primary);
+  height: 40px;
+  width: 192px;
+  color: white;
+  text-align: center;
+  line-height: 39px;
+  margin-top: 5px;
+}
+.alert_container {
+  transform: translateX(-29%);
+  z-index: 2000;
+  -webkit-transform: translateX(-29%);
+  -moz-transform: translateX(-29%);
+  -ms-transform: translateX(-29%);
+  -o-transform: translateX(-29%);
+}
+.list-group-item {
+  transition: transform 0.3s ease;
+}
+.list-group-item:hover {
+  cursor: pointer;
+  background-color: #9281cc67;
+}
+
+@media screen and (max-width: 1024px) {
+  .sendmoney {
+    width: 90%;
+    height: 590px;
+    justify-content: end;
+    margin-top: 41px;
+  }
+
+  .sendmoney__credit-card {
+    width: 284px;
+    left: 50%;
+    top: -100px;
+    transform: translateX(-50%);
+  }
+
+  .container-sendmoney {
+    width: 100%;
+  }
+
+  .container-contact {
+    width: 90%;
+    height: auto;
+  }
+  .sendmoney label,
+  .sendmoney input,
+  .sendmoney div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main--margin-top {
+    margin-top: 134px;
+  }
+  .sendmoney {
+    margin-top: 20px;
+  }
+  .contact__btn span {
+    margin-top: 10px;
+  }
+}

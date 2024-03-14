@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/menu.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row vh-100">
+        <header
+          class="col-md-3 col-lg-2 d-md-block sidebar d-flex justify-content-center"
+        >
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+          <label for="nav-toggle" class="nav-toggle-label outside">
+            <i class="bi bi-list"></i>
+            <i class="bi bi-x"></i>
+          </label>
+          <nav
+            class="position-sticky nav d-flex flex-column align-items-center"
+            style="top: 0"
+          >
+            <div class="nav__brand">KV</div>
+            <hr class="nav__hr" />
+            <ul class="d-flex flex-column gap-5 mt-4 nav__list">
+              <li>
+                <a href="menu.html">
+                  <img
+                    src="assets/icons/home.svg"
+                    alt="icons casa"
+                    class="me-3"
+                  /><span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="deposit.html">
+                  <img
+                    src="assets/icons/depositar.svg"
+                    alt="Icons de depositar"
+                    class="me-3"
+                  /><span>Depositar</span>
+                </a>
+              </li>
+              <li>
+                <a href="sendmoney.html">
+                  <img
+                    src="assets/icons/transferir.svg"
+                    alt="Icons transferir"
+                    class="me-3"
+                  /><span>Transferir</span>
+                </a>
+              </li>
+              <li>
+                <a href="transactions.html">
+                  <img
+                    src="assets/icons/transacciones.svg"
+                    alt="Icons de transaccion"
+                    class="me-3"
+                  /><span>Movimientos</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <main class="col-md-12 ms-md-auto col-lg-10 p-md-5">
+          <div class="container-fluid">
+            <div class="row container-menu">
+              <div class="col-md-9">
+                <section class="my-card rounded-4">
+                  <h2>Mi tarjeta</h2>
+                  <div class="my-card__credit-card">
+                    <div class="credit-card__logo">VISA</div>
+                    <div class="credit-card__balance" id="saldo-actual">
+                      $1.000.000
+                    </div>
+                    <div class="credit-card__number">
+                      <span>**** **** ****</span> 5326
+                    </div>
+                    <div
+                      class="credit-card__info d-flex justify-content-between w-100"
+                    >
+                      <div class="credit-card__holder">
+                        <span>Titular</span>
+                        Kamisato Ayaka
+                      </div>
+                      <div class="credit-card__expires">
+                        <span>Expires</span>
+                        01/30
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="link-pages d-flex align-items-center">
+                  <a
+                    class="d-flex flex-column justify-content-center align-items-center gap-1 rounded-4"
+                    href="deposit.html"
+                  >
+                    <img
+                      src="assets/icons/depositar.svg"
+                      alt="Icons de depositar"
+                    /><span>Depositar</span>
+                  </a>
+                  <a
+                    class="d-flex flex-column justify-content-center align-items-center gap-1 rounded-4"
+                    href="sendmoney.html"
+                  >
+                    <img
+                      src="assets/icons/transferir.svg"
+                      alt="Icons transferir"
+                    /><span>Transferir</span>
+                  </a>
+                  <a
+                    class="d-flex flex-column justify-content-center align-items-center gap-1 rounded-4"
+                    href="transactions.html"
+                  >
+                    <img
+                      src="assets/icons/transacciones.svg"
+                      alt="Icons de transaccion"
+                    /><span>Movimientos</span>
+                  </a>
+                </section>
+                <section class="last-transactions rounded-4">
+                  <h2>Ultimas transacciones</h2>
+                  <div class="transactions-list"></div>
+                </section>
+              </div>
+              <div class="col-md-3">
+                <section class="data">
+                  <div class="data__inner rounded-4 bg-white">
+                    <p class="data__inner-title">Total recibido este mes</p>
+                    <p id="total-recibido" class="data__inner-money">$</p>
+                    <span class="data__inner-percent"
+                      ><i class="bi bi-arrow-up"></i
+                    ></span>
+                  </div>
+                  <div class="data__inner rounded-4 bg-white">
+                    <p class="data__inner-title">Total gastado este mes</p>
+                    <p id="total-gastado" class="data__inner-money">$2315</p>
+                    <span id="porcentaje-perdida" class="data__inner-percent"
+                      ><i class="bi bi-arrow-down"></i
+                    ></span>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/dataStore.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/menu.js"></script>
+  </body>
+</html>
